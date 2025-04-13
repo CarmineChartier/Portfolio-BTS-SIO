@@ -229,8 +229,14 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    cursor: pointer; /* Le curseur devient un pointeur */
   }
+  
+  .presentation-cv img.cv-image:hover {
+    transform: scale(1.05); /* Effet de zoom lors du survol */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); /* Effet d'ombre plus prononcé */
+  }
+  
 
   .bloc-presentation,
   .bloc-projet {
@@ -446,6 +452,11 @@ section {
     padding: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Pour centrer verticalement */
+    height: 220px; /* Fixe une hauteur pour toutes les cartes */
   }
   
   .skill-card:hover {
@@ -453,10 +464,12 @@ section {
   }
   
   .skill-card img {
-    max-width: 80px;
-    height: auto;
+    height: 100px; /* Ou 80%, ou 100% selon ce que tu veux */
+    width: auto;
+    object-fit: contain; /* Pour bien rentrer dans le cadre sans déformation */
     margin-bottom: 10px;
   }
+  
   
   .slider-dots {
     text-align: center;
@@ -486,14 +499,159 @@ section {
   
   
 
+  /* Tableau des réalisations professionnelles */
+.realisation-tableau {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.realisation-item {
+    width: 50%; /* 50% - un petit espace pour le gap */
+    text-align: center;
+    padding-left : 10px;
+}
+
+.realisation-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.realisation-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+  
+
+
+/* PDFs */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Images des projets (sans effet popup) */
+  .ap-img {
+    width: 100%;
+    max-width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.ap-img:hover {
+    transform: scale(1.05);
+}
+
+.projets-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ← Forcera 3 colonnes */
+    gap: 20px;
+    margin-top: 20px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    justify-items: center;
+}
+
+.footer-contact {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95em;
+  margin-top: 40px;
+}
+
+.footer-contact a {
+  color: #ff7b00;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh; /* limite la hauteur de l'écran */
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+    object-fit: contain;
+  }
   
   
-
-
-
-
-
-
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
 
 
 
