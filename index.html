@@ -14,7 +14,7 @@
     <!-- MENU LATÉRAL -->
     <div class="sidebar">
         <div class="profil">
-          <img src="Images portfolio/photo.webp" alt="Ma photo">
+          <img src="Images portfolio/PP.jpg" alt="Ma photo">
           <h2>Carmine CHARTIER</h2>
         </div>
         <ul>
@@ -59,9 +59,12 @@
                     </div>
                 </div>
                 <div class="presentation-cv">
-                    <a href="Images portfolio/CV BTS.jpg" download target="_blank">
-                    <img src="Images portfolio/CV BTS.jpg" alt="Image de mon CV" class="cv-image"></img>
+                    <img src="Images portfolio/CV BTS.jpg" alt="Image de mon CV" class="cv-image" onclick="openModal('Images portfolio/CV BTS.jpg')"></img>
                     </a>
+                </div>
+                <div id="imageModal" class="modal">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <img class="modal-content" id="modalImage">
                 </div>
             </div>
         </section>
@@ -134,7 +137,7 @@
           
             <!-- Sous-catégorie : Certifications -->
             <div class="competence-bloc">
-                <h2 class="competence-sous-titre">Certifications</h2>
+                <h2 class="sous-titre">Certifications</h2>
                 <div class="certifications-gallery">
                   <img src="Images portfolio/certificat cisco 1.jpg" alt="Certification PIX" class="certification-img">
                   <img src="Images portfolio/certificat cisco 2.jpg" alt="Certification Cisco IT Essentials" class="certification-img">
@@ -144,29 +147,45 @@
 
             <!-- Sous-catégorie : Réseau / Code chat gpt-->
             <div class="competence-bloc">
-                <h2 class="competence-sous-titre">Compétences réseau</h2>
+                <h2 class="sous-titre">Compétences réseau</h2>
                 <div class="slider-wrapper">
                   <div class="slider-container" id="network-slider">
                     <div class="slider-track slider-track-netw">
                       <div class="netw-card skill-card">
-                        <img src="Images portfolio/html.png" alt="HTML">
-                        <p>HTML</p>
+                        <img src="Images portfolio/linux.png" alt="Linux">
+                        <p>Linux</p>
                       </div>
                       <div class="netw-card skill-card">
-                        <img src="Images portfolio/css.png" alt="CSS">
-                        <p>CSS</p>
+                        <img src="Images portfolio/windows server.png" alt="windows server">
+                        <p>Windows Serveur</p>
                       </div>
                       <div class="netw-card skill-card">
-                        <img src="Images portfolio/js.png" alt="JavaScript">
-                        <p>JavaScript</p>
+                        <img src="Images portfolio/OSI.png" alt="OSI">
+                        <p>Protocoles réseau</p>
                       </div>
                       <div class="netw-card skill-card">
-                        <img src="Images portfolio/python.png" alt="Python">
-                        <p>Python</p>
+                        <img src="Images portfolio/VMware.png" alt="VMware">
+                        <p>Virtualisation</p>
                       </div>
                       <div class="netw-card skill-card">
-                        <img src="Images portfolio/php.png" alt="PHP">
-                        <p>PHP</p>
+                        <img src="Images portfolio/pfsense.png" alt="Firewall">
+                        <p>Firewall</p>
+                      </div>
+                      <div class="netw-card skill-card">
+                        <img src="Images portfolio/routage.png" alt="routage">
+                        <p>Routage</p>
+                      </div>
+                      <div class="netw-card skill-card">
+                        <img src="Images portfolio/glpi.png" alt="glpi">
+                        <p>Gestion d'incidents</p>
+                      </div>
+                      <div class="netw-card skill-card">
+                        <img src="Images portfolio/wireshark.png" alt="wireshark">
+                        <p>Wireshark</p>
+                      </div>
+                      <div class="netw-card skill-card">
+                        <img src="Images portfolio/Cisco-Packet-Tracer.webp" alt="Cisco-Packet-Tracer">
+                        <p>Simulateur réseau</p>
                       </div>
                       <!-- Ajoute plus ici si besoin -->
                     </div>
@@ -179,29 +198,41 @@
 
                <!-- Sous-catégorie : Langages / Code chat gpt-->
             <div class="competence-bloc">
-              <h2 class="competence-sous-titre">Langages</h2>
+              <h2 class="sous-titre">Langages</h2>
               <div class="slider-wrapper">
                 <div class="slider-container" id="langage-slider">
                   <div class="slider-track slider-track-lang">
                     <div class="lang-card skill-card">
-                      <img src="Images portfolio/html.png" alt="HTML">
+                      <img src="Images portfolio/HTML.webp" alt="HTML">
                       <p>HTML</p>
                     </div>
                     <div class="lang-card skill-card">
-                      <img src="Images portfolio/css.png" alt="CSS">
+                      <img src="Images portfolio/CSS.jpg" alt="CSS">
                       <p>CSS</p>
                     </div>
                     <div class="lang-card skill-card">
-                      <img src="Images portfolio/js.png" alt="JavaScript">
+                      <img src="Images portfolio/JS.webp" alt="JavaScript">
                       <p>JavaScript</p>
                     </div>
                     <div class="lang-card skill-card">
-                      <img src="Images portfolio/python.png" alt="Python">
+                      <img src="Images portfolio/Python.webp" alt="Python">
                       <p>Python</p>
                     </div>
                     <div class="lang-card skill-card">
-                      <img src="Images portfolio/php.png" alt="PHP">
+                      <img src="Images portfolio/PHP.jpg" alt="PHP">
                       <p>PHP</p>
+                    </div>
+                    <div class="lang-card skill-card">
+                      <img src="Images portfolio/Csharp.webp" alt="Csharp">
+                      <p>C#</p>
+                    </div>
+                    <div class="lang-card skill-card">
+                      <img src="Images portfolio/SQL.png" alt="SQL">
+                      <p>SQL</p>
+                    </div>
+                    <div class="lang-card skill-card">
+                      <img src="Images portfolio/Ocaml.webp" alt="Ocaml">
+                      <p>OCaml</p>
                     </div>
                     <!-- Ajoute plus ici si besoin -->
                   </div>
@@ -217,26 +248,56 @@
           </section>
           
 
-        <section id="projets" class="section">
-            <h1 class="section-title">Mes Projets</h1>
-            <div class="section-divider"></div>
+        <section id="projets" class="section">          
+          <h1 class="section-title">Mes Projets</h1>
+          <div class="section-divider"></div>
             
-            <div class="competence-bloc">
-              <h2 class="competence-sous-titre">Certifications</h2>
-              <div class="certifications-gallery">
-                <img src="Images portfolio/certificat cisco 1.jpg" alt="Certification PIX" class="certification-img">
-                <img src="Images portfolio/certificat cisco 2.jpg" alt="Certification Cisco IT Essentials" class="certification-img">
-                <img src="Images portfolio/certificat cisco 3.jpg" alt="Certification SecNumAcadémie" class="certification-img">
-              </div>
+          <h2 class="sous-titre">Tableau des réalisations professionnelles</h2>
+
+          <div class="realisation-tableau">
+           <div class="realisation-item">
+              <img src="Images portfolio/Tab1.png" alt="Tab réa pro 1">
+              <!--<p>Réalisations en cours de formation</p>-->
             </div>
+            <div class="realisation-item">
+              <img src="Images portfolio/Tab 2.png" alt="Tab réa pro 2">
+              <!--<p>Réalisations en milieu professionnel</p>-->
+            </div>
+          </div>
+
+          <div class="competence-bloc">
+            <h2 class="sous-titre">Ateliers professionnalisants</h2>
+            <div class="projets-gallery">
+              <img src="Images portfolio/AP HTML.png" alt="AP HTML" class="ap-img" onclick="openPDF('PDFs/Documentation Site HTML.pdf')">
+              <img src="Images portfolio/AP Calcul.png" alt="AP Calcul" class="ap-img" onclick="openPDF('PDFs/Documentation AP calculs.pdf')">
+              <img src="Images portfolio/AP Casamance.png" alt="AP Casamance" class="ap-img" onclick="openPDF('PDFs/Documentation Cas Casamance.pdf')">
+              <img src="Images portfolio/AP WebRadio.png" alt="AP WebRadio" class="ap-img" onclick="openPDF('PDFs/Documentation AP WebRadio.pdf')">
+              <img src="Images portfolio/AP VPN.png" alt="AP VPN" class="ap-img" onclick="openPDF('PDFs/Documentation AP VPN.pdf')">
+              <img src="Images portfolio/AP CyberSafe.png" alt="AP Cybersafe" class="ap-img" onclick="openPDF('PDFs/Documentation AP Cybersafe.pdf')">
+            </div>
+          </div>
+
+          <!-- Modal PDF Viewer -->
+          <div id="pdfModal" class="modal">
+            <span class="close" onclick="closePDF()">&times;</span>
+            <iframe id="pdfFrame" class="modal-content" frameborder="0"></iframe>
+          </div>
         </section>
 
-        <section id="contact">
-            <h1>Me Contacter</h1>
-            <p>Email : <a href="mailto:contact@example.com">contact@example.com</a></p>
-            <p>LinkedIn : <a href="https://linkedin.com" target="_blank">Mon profil</a></p>
+        <section id="contact" class="footer-contact">
+          <div class="footer-content">
+            <p><strong>Carmine CHARTIER</strong></p>
+            <p>
+              <a href="mailto:carmine.chartier@gmail.com">carmine.chartier@gmail.com</a>
+            </p>
+            <p>
+              <a href="https://www.linkedin.com/in/carmine-chartier/" target="_blank">
+                LinkedIn : Carmine CHARTIER
+              </a>
+            </p>
+          </div>
         </section>
-    </div>
+        
 
 
 
@@ -417,6 +478,40 @@
     </script>
 
 
+    <!-- Script PDFs -->
+    <script>
+      function openPDF(pdfUrl) {
+        document.getElementById('pdfFrame').src = pdfUrl;
+        document.getElementById('pdfModal').style.display = "block";
+      }
+      
+      function closePDF() {
+        document.getElementById('pdfModal').style.display = "none";
+        document.getElementById('pdfFrame').src = "";
+      }
+      </script>
+  
+      <script>
+        function openModal(imageSrc) {
+          const modal = document.getElementById('imageModal');
+          const modalImage = document.getElementById('modalImage');
+          modal.style.display = 'block';
+          modalImage.src = imageSrc;
+        }
+      
+        function closeModal() {
+          document.getElementById('imageModal').style.display = 'none';
+        }
+      
+        // Bonus : fermer en cliquant en dehors de l'image
+        window.onclick = function(event) {
+          const modal = document.getElementById('imageModal');
+          if (event.target === modal) {
+            closeModal();
+          }
+        }
+      </script>
+  
   
   
   
